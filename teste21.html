@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+    <title>prosoccer</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body
+        {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            background-color: gray;
+            overflow: auto;
+			
+        }
+        .corpo
+        {
+          width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: white;
+        }
+        .logo
+        {
+            margin: 10px;
+            padding: 10px;
+            width: 50px;
+            height:50px;
+            background-color: tomato;
+        }
+        .menu
+        {
+         border: 1px solid black;
+         list-style-type: none;
+         padding: 5px;
+         width: 100%;
+         height: 34px;
+         text-align: center;
+         background-color: black;
+         
+        }
+        .menutop
+        {
+            
+            display: inline;
+            padding: 8px 16px;
+            color :white;
+            border-right: 1px white;
+            
+        }
+        .menutop a
+        {
+         padding: 8px 16px;
+         text-decoration: none;
+         text-align: center;
+        }
+        .menutop a:hover
+        {
+         background-color: beige;
+         padding: 8px 16px;
+         color:black;
+        }
+        .container
+        {
+            padding: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            background-color: white;
+        }
+        .item
+        {
+            text-align: center;
+        }
+        .p1
+        {
+            text-align: center;
+            background-color: white;
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0px;
+        }
+        .conteudo
+        {
+            margin-left: auto;
+            margin-right: auto;
+            width:75%;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3 ,1fr);
+            background-color: white;
+        }
+        .imagem1, .imagem2, .imagem3, .imagem4, .imagem5, .imagem6, .imagem7,.imagem9
+        {
+            background-color:#F4F4F4;
+            
+            height:200px;
+            box-sizing: border-box;
+            align-items: center;
+
+        }
+        h1, h2, h3, h4, h5, h6, h7,.rato,.p1,.p2,.p3,.p4,.p5,.card
+        {
+          background-color:#F4F4F4;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: large;
+            text-align: center;
+        }
+        .card
+        {
+          background-color: #F4F4F4;
+          margin-bottom: 50px;
+          margin-left: 10px;
+          margin-right:10px;
+        }
+        .imagem1
+        {
+          
+            margin-bottom: 50px;
+        }
+        .rato
+        {
+            
+            margin-bottom: 50px;
+            margin-right: 50px;
+            
+        }
+        h2
+        {
+            
+            margin-bottom: 0px;
+        }
+        .p2
+        {
+            
+            margin-bottom: 0px;
+            margin-right: 50px;
+            margin-left: 10px;
+        }
+        .imagem2
+        {
+            
+            margin-bottom: 50px;
+        }
+        h3
+        {
+            
+            margin-bottom: 0px;
+        }
+        .p3
+        {
+            
+            margin-bottom: 0px;
+            margin-right: 50px;
+        }
+        .imagem3
+        {
+            
+            margin-bottom: 50px;
+        }
+        h4
+        {
+            
+            margin-bottom: 0px;
+        }
+        .p4
+        {
+            
+            margin-bottom: 0px;
+            margin-right: 50px;
+            margin-left: 10px;
+            
+        }
+        .imagem4
+        {
+            
+            margin-bottom: 50px;
+        }
+        h5
+        {
+            
+            margin-bottom: 0px;
+        }
+        .p5
+        {
+            
+            margin-bottom: 0px;
+            margin-right: 50px;
+        }
+        .imagem5
+        {
+            
+            margin-bottom: 50px;
+        }
+        .item-esquerda
+        {
+            grid-column: 3 / 4;
+            grid-row: 1 / 3;
+            list-style-type: none;
+            background-color:#F4F4F4;
+            margin-right: auto;
+        }
+        .sub-item-esquerda
+        {
+            grid-column: 3 / 4;
+            grid-row: 3 / 8;
+            list-style-type: none;
+            background-color:#F4F4F4;
+            margin-bottom: 50px;
+            margin-right: auto;
+        }
+        .pezin,.texto-pé
+        {
+            margin: auto;
+            width:75%;
+            display: grid;
+            grid-template-columns: repeat(3 ,1fr);
+            background-color: white;
+            margin-bottom: 50px;
+        }
+        .d1,.d2,.d3
+        {
+            list-style-type: none;
+            
+        }
+        .d1
+        {
+            grid-column: 1/2;
+            grid-row: 1/4;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .d2, .d2
+        {
+            grid-column: 2/3;
+            color:black;           
+            margin-right: 10px;
+        }
+        .d3
+        {
+            grid-column: 3/4;
+            grid-row: 1/4;
+            margin-right: 10px;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="cabeçalho">
+        <img class="logo" src="imgs/0011.jpg">
+        <ul class="menu">
+            <li class="menutop"><a href="ok.html" >home</a></li>
+            <li class="menutop"><a href="cachorro.jpg" >foto de cachorro</a></li>
+            <li class="menutop"><a href="#" >joutin</a></li>
+            <li class="menutop"><a href="#" >joutin</a></li>
+            <li class="menutop"><a href="http://pudim.com.br" >pudim</a></li>
+        </ul>
+
+  <div class="corpo">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+          
+              
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="imgs/lesma.jpg"  alt="lesma" style="width:100%;height:368px  ">
+                  <a href="https://marsemfim.com.br/lesmas-do-mar">informações</a>
+                </div>
+          
+                <div class="item">
+                  <img src="imgs/tartaruga.jpg" alt="tartaruga" style="width:100%; height: 368px;">
+                  <a href="https://pt.wikipedia.org/wiki/Tartaruga-comum">informações</a>
+                </div>
+              
+                <div class="item">
+                  <img src="imgs/meduza.jpg" alt="meduza" style="width:100%;height: 368px;">
+                  <a href="https://pt.wikipedia.org/wiki/Medusozoa">informações</a>
+                </div>
+              </div>
+          
+              
+              <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+    </header> 
+
+    
+    <section class="conteudo">
+      <div class="card">
+        <h1>OS ROEDORES MAIS INTELIGENTES</h1>
+        <img class="imagem1" src="imgs/castor.jpg">
+        <p class="rato">Castor é um gênero de roedores semi-aquáticos, da família Castoridae, nativo da América do Norte e da Europa, sendo o único gênero ainda existente dessa família, com duas espécies remanescentes: o C. fiber (castor-europeu) e o C. canadensis (castor-americano). Existiu também o castor-de-kellogg (C. californicus), que está extinto desde o Pleistoceno. Todos <a href="https://pt.wikipedia.org/wiki/Castor">ler mais...</a></p>
+      </div>
+
+      <div class="card">
+        <h2> A MARITACA</h2>
+        <p class="p2">A coloração básica da plumagem é verde. As partes inferiores e laterais da cabeça, peito e abdômen são de um verde com tons amarelados. A parte traseira da cabeça, a nuca, é de um verde levemente azulado. A base das asas é de um marrom oliváceo. A cobertura de pluma da base das asas é de um marrom oliváceo e as penas exteriores são de um azul-violeta. O bico é amarronzado, mais claro no topo. As narinas ficam na base do bico. O anel perioftálmico é de um cinza pálido<a href="https://pt.wikipedia.org/wiki/Periquito-verde"> ler mais</a></p>
+        <img class="imagem2" src="imgs/peligrito.jpg"  alt="periquito verde">
+      </div>
+
+      <div class="card">
+        <h3>OQUE É UM MARSUPIAL</h3>
+        <p class="p3">Os marsupiais (latim científico: Marsupialia) constituem uma infraclasse de mamíferos que se distinguem dos demais de sua classe, como os monotremados e placentários, por sua anatomia e fisiologia reprodutiva: são <a href="https://pt.wikipedia.org/wiki/Marsupiais">ler mais</a></p>
+        <img class="imagem3" src="imgs/marsupiais.jpg">
+      </div>
+
+      <div class="card">
+        <h4>ESQUILOS VOADORES PODEM REALMENTE VOAR?</h4>
+        <p class="p4">Os esquilos-voadores pertencem a tribo Pteromyini (família Sciuridae). Existem 45 espécies dessa tribo. Os esquilos voadores são também esquilos arborícolas, no entanto são uma família com bastantes <a href="https://pt.wikipedia.org/wiki/Esquilo-voador">ler mais</a></p>
+        <img class="imagem4" src="imgs/esquilo voador.jpg">
+      </div>
+
+      <div class="card">
+        <h5>FORMIGAS ZUMBIS?</h5>
+        <p class="p5">(apenas em inglês) <br> Ophiocordyceps is a genus of fungi within the family Ophiocordycipitaceae.[2] The widespread genus, first described scientifically by British mycologist Tom Petch in 1931,[3] contains about 140 species <a href="https://en.wikipedia.org/wiki/Ophiocordyceps_unilateralis">ler mais</a></p>
+        <img class="imagem5" src="imgs/fungo.png">
+      </div>
+
+
+        <ul class="item-esquerda">
+          <img class="imagem8" src="imgs/lesma2.jpg"  alt="lesma do mar" >
+            <li>(somente em inglês) <br> Nudibranchs (/ˈnjuːdɪbræŋk/[2]) are a group of soft-bodied, marine gastropod molluscs which shed their shells after their larval stage.[3] They are noted for their often extraordinary colours and striking forms, and they have been given colourful nicknames to match, such as "clown," "marigold," "splendid," "dancer," "dragon,"[4] or "sea rabbit." [5] Currently, about 3,000 valid species of nudibranchs are known.[6]
+
+              The word "nudibranch" comes from the Latin nudus "naked" and the Ancient Greek βράγχια (bránkhia) "gills".
+              
+              Nudibranchs are often casually called sea slugs, as they are a family of opistobranchs (sea slugs), within the phylum Mollusca (molluscs), but many sea slugs belong to several taxonomic groups which are not closely related to nudibranchs. A number of these other sea slugs, such as the photosynthetic Sacoglossa and the colourful Aglajidae, are often confused with nudibranchs. <a href="https://en.wikipedia.org/wiki/Nudibranch"> ler mais</a></li>
+        </ul>
+        <ul class="sub-item-esquerda">
+            <li>
+              <img class="imagem9" src="imgs/abelha.jpg"  alt="abelha" > <br>
+              Abelhas são insetos voadores, conhecidos pelo seu importante papel na polinização. Pertencem à ordem Hymenoptera, da superfamília Apoidea, subgrupo Anthophila, e são aparentados das vespas e formigas.
+
+              O representante mais conhecido é a Apis mellifera, oriunda do Velho Mundo, criada em larga escala para a produção de mel, própolis, geleia real e veneno. As espécies de abelhas nativas das Américas e Oceania não possuem ferrão e são menos agressivas do que as espécies africanas, a maioria destas pertence à tribo Meliponini. As abelhas com ferrão encontradas comumente no Brasil são espécies híbridas de abelhas europeias e africanas, criadas para maior produtividade e resistência. As abelhas sem ferrão encontradas comumente no Brasil são espécies do gênero Meliponini e a mais conhecida é a jataí Tetragonisca angustula.
+              
+              Há mais de 25.000 espécies de abelhas conhecidas em sete famílias biológicas reconhecidas. Elas são encontrados em todos os continentes, exceto a Antártida, em todos os habitats do planeta onde existam plantas de flores polinizadas por insetos.
+              
+              As abelhas, abelhões, e abelhas sem ferrão vivem socialmente em colônias.
+              
+              Elas estão adaptadas a uma alimentação de néctar e pólen, o primeiro principalmente como uma fonte de energia e os último principalmente pelas proteínas e outros nutrientes. A maioria do pólen é usado como o alimento para as larvas que as tem definido como um insecto herbívoro mas que estudos recentes podem obrigar a reconsiderar essa posição científica, catalogado-as antes como omnívoras, pois foi percebida a importância alimentar das proteínas microbianas existentes no interior do mesmo pólen[1].
+              
+              A polinização que as abelhas fazem é importantíssimo, tanto ecologicamente como comercialmente; o declínio em abelhas selvagens aumentou o valor da polinização por colmeias, geridas comercialmente, de abelhas melíferas. <a href="https://pt.wikipedia.org/wiki/Abelha"> ler mais</a>
+            </li>
+        </ul>
+        
+        
+    </section>
+
+
+    <footer class="pézin">
+      
+        <ul class="texto-pé">
+            <li class="d1">
+                bibliografia:<br>
+                wikipedia<br>
+                estadão<br>
+                portal educação<br>
+            </li>
+            <li class="d2">
+                sites que tabem podem chamar sua atenção: <br>
+                <li class="d2"><a href="http://www.ninha.bio.br/biologia">http://www.ninha.bio.br/biologia</a></li>
+                <li class="d2"><a href="https://www.biologianet.com/zoologia">https://www.biologianet.com/zoologia</a></li>
+                <li class="d2"><a href="https://brasilescola.uol.com.br/biologia">https://brasilescola.uol.com.br/biologia</a></li>
+                <li class="d2"></li>
+                <li class="d2"></li>
+            </li>
+            <li class="d3">
+                <p class="agradecimentos">obrigado por visitar meu site<br>
+                espero que tenha gostado!!!</p>
+                <p>os textos que estão em inglês pois, infelismente, não encontrei em português com a mesma amplitude de conteudo.</p>
+            </li>
+        </ul>
+    </footer>
+  </div>
+</body>
+</html>
